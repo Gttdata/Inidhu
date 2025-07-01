@@ -1,130 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inidhu Education Foundation - Founder & Team</title>
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config={theme:{extend:{colors:{primary:'#4A90E2',secondary:'#50C878'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#4A90E2", secondary: "#50C878" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
     <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        body {
-            font-family: 'Merriweather', serif;
-        }
-        h1, h2, h3, h4, h5, h6, .nav-link {
-            font-family: 'Montserrat', sans-serif;
-        }
-        .hero-section {
-            background-image: url('https://readdy.ai/api/search-image?query=education%2520foundation%2520with%2520diverse%2520group%2520of%2520happy%2520children%2520in%2520classroom%2520learning%2520environment%2520with%2520soft%2520natural%2520lighting%2520coming%2520from%2520left%2520side%2520creating%2520gradient%2520effect%2520perfect%2520for%2520text%2520overlay%2520on%2520left%2520side%2520professional%2520photography&width=1920&height=1080&seq=1&orientation=landscape');
-            background-size: cover;
-            background-position: center;
-        }
-        .hero-overlay {
-            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.4) 80%, rgba(255,255,255,0) 100%);
-        }
-        input[type="number"]::-webkit-inner-spin-button,
-        input[type="number"]::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #4A90E2;
-            transition: width 0.3s ease;
-        }
-        .nav-link.active::after,
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .custom-checkbox {
-            display: none;
-        }
-        .checkbox-label {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-        .checkbox-custom {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #4A90E2;
-            border-radius: 4px;
-            margin-right: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-        }
-        .checkbox-custom i {
-            color: white;
-            font-size: 12px;
-            visibility: hidden;
-        }
-        .custom-checkbox:checked + .checkbox-label .checkbox-custom {
-            background-color: #4A90E2;
-        }
-        .custom-checkbox:checked + .checkbox-label .checkbox-custom i {
-            visibility: visible;
-        }
-        .custom-switch {
-            position: relative;
-            display: inline-block;
-            width: 50px;
-            height: 24px;
-        }
-        .custom-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        .switch-slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 24px;
-        }
-        .switch-slider:before {
-            position: absolute;
-            content: "";
-            height: 18px;
-            width: 18px;
-            left: 3px;
-            bottom: 3px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-        input:checked + .switch-slider {
-            background-color: #4A90E2;
-        }
-        input:checked + .switch-slider:before {
-            transform: translateX(26px);
-        }
-        .counter {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-        }
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      body {
+        font-family: "Merriweather", serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .nav-link {
+        font-family: "Montserrat", sans-serif;
+      }
+      .hero-section {
+        background-image: url("https://readdy.ai/api/search-image?query=education%2520foundation%2520with%2520diverse%2520group%2520of%2520happy%2520children%2520in%2520classroom%2520learning%2520environment%2520with%2520soft%2520natural%2520lighting%2520coming%2520from%2520left%2520side%2520creating%2520gradient%2520effect%2520perfect%2520for%2520text%2520overlay%2520on%2520left%2520side%2520professional%2520photography&width=1920&height=1080&seq=1&orientation=landscape");
+        background-size: cover;
+        background-position: center;
+      }
+      .hero-overlay {
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.95) 0%,
+          rgba(255, 255, 255, 0.9) 50%,
+          rgba(255, 255, 255, 0.4) 80%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #4a90e2;
+        transition: width 0.3s ease;
+      }
+      .nav-link.active::after,
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .custom-checkbox {
+        display: none;
+      }
+      .checkbox-label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .checkbox-custom {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #4a90e2;
+        border-radius: 4px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+      }
+      .checkbox-custom i {
+        color: white;
+        font-size: 12px;
+        visibility: hidden;
+      }
+      .custom-checkbox:checked + .checkbox-label .checkbox-custom {
+        background-color: #4a90e2;
+      }
+      .custom-checkbox:checked + .checkbox-label .checkbox-custom i {
+        visibility: visible;
+      }
+      .custom-switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+      }
+      .custom-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .switch-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 24px;
+      }
+      .switch-slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+      input:checked + .switch-slider {
+        background-color: #4a90e2;
+      }
+      input:checked + .switch-slider:before {
+        transform: translateX(26px);
+      }
+      .counter {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+      }
     </style>
-</head>
-<body class="bg-gray-50">
+  </head>
+  <body class="bg-gray-50">
     <header class="fixed w-full bg-white shadow-md z-50">
       <div
         class="container mx-auto px-4 py-3 flex items-center justify-between"
@@ -154,13 +197,19 @@
           >
           <a
             href="impact.html"
-            class="nav-link text-gray-800 font-medium hover:text-primary transition-colors"
+            class="text-gray-800 font-medium hover:text-primary transition-colors"
             >Impact</a
           >
           <a
             href="founder-team.html"
             class="nav-link active text-gray-800 font-medium hover:text-primary transition-colors"
             >Our Team</a
+          >
+
+          <a
+            href="success-stories.html"
+            class="nav-link text-gray-800 font-medium hover:text-primary transition-colors"
+            >Success Stories</a
           >
           <a
             href="contact.html"
@@ -218,6 +267,12 @@
               class="text-gray-800 font-medium hover:text-primary transition-colors"
               >Our Team</a
             >
+
+            <a
+              href="success-stories.html"
+              class="text-gray-800 font-medium hover:text-primary transition-colors"
+              >Success Stories</a
+            >
             <a
               href="contact.html"
               class="text-gray-800 font-medium hover:text-primary transition-colors"
@@ -234,62 +289,124 @@
     </header>
 
     <main class="pt-28 pb-16">
-        <section class="bg-white py-16">
-            <div class="container mx-auto px-4 max-w-4xl">
-                <h1 class="text-4xl font-bold text-gray-900 mb-6 text-center">Our Team</h1>
-                <p class="text-lg text-gray-700 mb-12 text-center">
-                    Inidhu Education Foundation is guided by a dedicated team of passionate individuals committed to educational excellence.
-                </p>
+      <!-- Our Team Section -->
+      <section class="bg-white py-20">
+        <div class="container mx-auto px-4 max-w-6xl">
+          <h1 class="text-4xl font-bold text-gray-900 mb-6 text-center">
+            Our Team
+          </h1>
+          <p class="text-lg text-gray-700 mb-12 text-center">
+            Inidhu Education Foundation is guided by a dedicated team of
+            passionate individuals committed to educational excellence.
+          </p>
 
-                <div class="mb-12 text-center">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Founder</h2>
-                    <div class="bg-blue-50 rounded-lg shadow-lg p-8 inline-block max-w-md">
-                        <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-primary">
-                            <img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520a%2520male%2520educator%2520smiling%2520with%2520a%2520simple%2520background%2520professional%2520photography&width=200&height=200&seq=1&orientation=squarish" alt="Aathiganesan" class="w-full h-full object-cover object-center">
-                        </div>
-                        <h3 class="text-2xl font-bold text-primary mb-2">Aathiganesan</h3>
-                        <p class="text-gray-700 mb-4">Founder</p>
-                        <ul class="list-disc list-inside text-gray-700 text-left mx-auto max-w-xs space-y-2">
-                            <li>BE (Civil Engg.), B.Ed.</li>
-                            <li>Former Gandhi Fellow (Rajasthan)</li>
-                            <li>Former Resource Person at Azim Premji Foundation</li>
-                            <li>Tamil Nadu Education Fellow (Thiruvarur)</li>
-                            <li>Expertise in ECCE & Foundational Literacy</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="text-center">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Esteemed Board Members</h2>
-                    <p class="text-lg text-gray-700 mb-8">
-                        Our board members serve voluntarily, providing invaluable guidance on education strategy and fundraising.
-                    </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-2xl mx-auto">
-                        <div class="bg-green-50 rounded-lg shadow p-6">
-                            <h3 class="text-xl font-semibold text-secondary mb-2">Abirami Kamath</h3>
-                            <p class="text-gray-700">CEO of Helprack</p>
-                        </div>
-                        <div class="bg-green-50 rounded-lg shadow p-6">
-                            <h3 class="text-xl font-semibold text-secondary mb-2">A. Ilangovan</h3>
-                            <p class="text-gray-700">Director, Excelok Tech (Singapore)</p>
-                        </div>
-                        <div class="bg-green-50 rounded-lg shadow p-6">
-                            <h3 class="text-xl font-semibold text-secondary mb-2">Dr. Prahalathan KK</h3>
-                            <p class="text-gray-700">Co-founder, Bhumi</p>
-                        </div>
-                        <div class="bg-green-50 rounded-lg shadow p-6">
-                            <h3 class="text-xl font-semibold text-secondary mb-2">B. Panneerselvam</h3>
-                            <p class="text-gray-700">ex-CGM, CPCL</p>
-                        </div>
-                    </div>
-                </div>
+          <!-- Founder Section -->
+          <!-- Founder Section -->
+          <div class="mb-20 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Our Founder</h2>
+            <div
+              class="bg-blue-50 rounded-2xl shadow-xl p-10 max-w-lg mx-auto hover:shadow-2xl transition"
+            >
+              <div
+                class="w-28 h-28 rounded-full bg-white flex items-center justify-center mx-auto mb-6 border-4 border-blue-300"
+              >
+                <!-- Heroicon: User Icon -->
+                <img src="images/user.png" height="40px" width="60px" />
+              </div>
+              <h3 class="text-2xl font-bold text-blue-700 mb-1">
+                Aathiganesan
+              </h3>
+              <p class="text-gray-700 font-medium mb-4">Founder</p>
+              <ul
+                class="text-left list-disc list-inside text-gray-700 space-y-2 text-base max-w-xs mx-auto"
+              >
+                <li>BE (Civil Engg.), B.Ed.</li>
+                <li>Former Gandhi Fellow (Rajasthan)</li>
+                <li>Former Resource Person at Azim Premji Foundation</li>
+                <li>Tamil Nadu Education Fellow (Thiruvarur)</li>
+                <li>Expertise in ECCE & Foundational Literacy</li>
+              </ul>
             </div>
-        </section>
+          </div>
+
+          <!-- Board Members -->
+          <div class="text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              Our Esteemed Board Members
+            </h2>
+            <p class="text-lg text-gray-700 mb-10">
+              Our board members serve voluntarily, providing invaluable guidance
+              on education strategy and fundraising.
+            </p>
+
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto"
+            >
+              <!-- Card -->
+              <div
+                class="bg-green-50 rounded-xl shadow-md p-6 hover:shadow-lg transition"
+              >
+                <h3 class="text-xl font-semibold text-green-800 mb-2">
+                  Abirami Kamath
+                </h3>
+                <p class="text-gray-700">CEO of Helprack</p>
+              </div>
+              <div
+                class="bg-green-50 rounded-xl shadow-md p-6 hover:shadow-lg transition"
+              >
+                <h3 class="text-xl font-semibold text-green-800 mb-2">
+                  A. Ilangovan
+                </h3>
+                <p class="text-gray-700">Director, Excelok Tech (Singapore)</p>
+              </div>
+              <div
+                class="bg-green-50 rounded-xl shadow-md p-6 hover:shadow-lg transition"
+              >
+                <h3 class="text-xl font-semibold text-green-800 mb-2">
+                  Dr. Prahalathan KK
+                </h3>
+                <p class="text-gray-700">Co-founder, Bhumi</p>
+              </div>
+              <div
+                class="bg-green-50 rounded-xl shadow-md p-6 hover:shadow-lg transition"
+              >
+                <h3 class="text-xl font-semibold text-green-800 mb-2">
+                  B. Panneerselvam
+                </h3>
+                <p class="text-gray-700">ex-CGM, CPCL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners Section -->
+      <section class="py-20">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Our Partners
+          </h2>
+          <p class="text-lg text-gray-700 mb-10">
+            We are proud to be associated with organizations that support
+            quality education.
+          </p>
+
+          <div class="mx-auto max-w-6xl bg-white rounded-2xl shadow-lg p-6">
+            <img
+              src="images/partners.png"
+              alt="Partner Logos"
+              class="w-full max-h-40 object-contain"
+              style="background-color: transparent"
+            />
+          </div>
+        </div>
+      </section>
     </main>
 
-     <footer class="bg-gray-900 text-white py-12 md:py-16">
+    <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12 md:py-16">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <!-- About Column -->
           <div>
             <h3 class="text-xl font-bold mb-4">About Inidhu</h3>
@@ -301,25 +418,29 @@
             </p>
             <div class="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/people/Inidhu-Education-Foundation/61565926177822/"
+                target="_blank"
                 class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors"
               >
                 <i class="ri-facebook-fill"></i>
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@InidhuEducationFoundation"
+                target="_blank"
                 class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors"
               >
-                <i class="ri-twitter-x-fill"></i>
+                <i class="ri-youtube-fill"></i>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/inidhueducationfoundation/"
+                target="_blank"
                 class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors"
               >
                 <i class="ri-instagram-fill"></i>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/inidhu-education-foundation/"
+                target="_blank"
                 class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors"
               >
                 <i class="ri-linkedin-fill"></i>
@@ -366,6 +487,13 @@
                   >Our Team</a
                 >
               </li>
+               <li>
+                <a
+                  href="success-stories.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Success Stories</a
+                >
+              </li>
               <li>
                 <a
                   href="contact.html"
@@ -373,6 +501,7 @@
                   >Contact Us</a
                 >
               </li>
+             
             </ul>
           </div>
 
@@ -385,33 +514,35 @@
                   <i class="ri-map-pin-line"></i>
                 </div>
                 <span class="text-gray-400"
-                  >123 Education Street, New Delhi, 110001, India</span
-                >
+                  >Inidhu Education Foundation (Reg No: 43/2024) Second Floor,
+                  Opp. To TAHDCO office, District Collectorate, Thiruvarur – 610
+                  004
+                </span>
               </li>
               <li class="flex items-center">
                 <div class="w-5 h-5 flex items-center justify-center mr-3">
                   <i class="ri-phone-line"></i>
                 </div>
-                <span class="text-gray-400">+91 98765 43210</span>
+                <span class="text-gray-400">+91 8825952136</span>
               </li>
               <li class="flex items-center">
                 <div class="w-5 h-5 flex items-center justify-center mr-3">
                   <i class="ri-mail-line"></i>
                 </div>
-                <span class="text-gray-400">info@inidhu.org</span>
+                <span class="text-gray-400">inidhueducation@gmail.com</span>
               </li>
             </ul>
           </div>
 
           <!-- Office Hours -->
-          <div>
+          <!-- <div>
             <h3 class="text-xl font-bold mb-4">Office Hours</h3>
             <ul class="space-y-3">
               <li class="text-gray-400">Monday - Friday: 9:00 AM - 6:00 PM</li>
               <li class="text-gray-400">Saturday: 10:00 AM - 2:00 PM</li>
               <li class="text-gray-400">Sunday: Closed</li>
-            </ul>
-            <div class="mt-6">
+            </ul> -->
+            <!-- <div class="mt-6">
               <h4 class="font-bold mb-2">We Accept</h4>
               <div class="flex space-x-3">
                 <div class="w-10 h-6 flex items-center justify-center">
@@ -424,8 +555,8 @@
                   <i class="ri-paypal-fill ri-lg"></i>
                 </div>
               </div>
-            </div>
-          </div>
+            </div> -->
+          <!-- </div> -->
         </div>
 
         <div class="border-t border-gray-800 pt-8">
@@ -553,5 +684,5 @@
         });
       });
     </script>
-</body>
+  </body>
 </html>
