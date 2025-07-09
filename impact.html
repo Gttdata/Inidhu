@@ -1,138 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inidhu Education Foundation - Our Impact</title>
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config={theme:{extend:{colors:{primary:'#4A90E2',secondary:'#50C878'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#4A90E2", secondary: "#50C878" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
     <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        body {
-            font-family: 'Merriweather', serif;
-        }
-        h1, h2, h3, h4, h5, h6, .nav-link {
-            font-family: 'Montserrat', sans-serif;
-        }
-        .hero-section {
-            background-image: url('https://readdy.ai/api/search-image?query=education%2520foundation%2520with%2520diverse%2520group%2520of%2520happy%2520children%2520in%2520classroom%2520learning%2520environment%2520with%2520soft%2520natural%2520lighting%2520coming%2520from%2520left%2520side%2520creating%2520gradient%2520effect%2520perfect%2520for%2520text%2520overlay%2520on%2520left%2520side%2520professional%2520photography&width=1920&height=1080&seq=1&orientation=landscape');
-            background-size: cover;
-            background-position: center;
-        }
-        .hero-overlay {
-            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.4) 80%, rgba(255,255,255,0) 100%);
-        }
-        input[type="number"]::-webkit-inner-spin-button,
-        input[type="number"]::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #4A90E2;
-            transition: width 0.3s ease;
-        }
-        .nav-link.active::after,
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .custom-checkbox {
-            display: none;
-        }
-        .checkbox-label {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-        .checkbox-custom {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #4A90E2;
-            border-radius: 4px;
-            margin-right: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-        }
-        .checkbox-custom i {
-            color: white;
-            font-size: 12px;
-            visibility: hidden;
-        }
-        .custom-checkbox:checked + .checkbox-label .checkbox-custom {
-            background-color: #4A90E2;
-        }
-        .custom-checkbox:checked + .checkbox-label .checkbox-custom i {
-            visibility: visible;
-        }
-        .custom-switch {
-            position: relative;
-            display: inline-block;
-            width: 50px;
-            height: 24px;
-        }
-        .custom-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        .switch-slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 24px;
-        }
-        .switch-slider:before {
-            position: absolute;
-            content: "";
-            height: 18px;
-            width: 18px;
-            left: 3px;
-            bottom: 3px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-        input:checked + .switch-slider {
-            background-color: #4A90E2;
-        }
-        input:checked + .switch-slider:before {
-            transform: translateX(26px);
-        }
-        .counter {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-        }
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      body {
+        font-family: "Merriweather", serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .nav-link {
+        font-family: "Montserrat", sans-serif;
+      }
+      .hero-section {
+        background-image: url("https://readdy.ai/api/search-image?query=education%2520foundation%2520with%2520diverse%2520group%2520of%2520happy%2520children%2520in%2520classroom%2520learning%2520environment%2520with%2520soft%2520natural%2520lighting%2520coming%2520from%2520left%2520side%2520creating%2520gradient%2520effect%2520perfect%2520for%2520text%2520overlay%2520on%2520left%2520side%2520professional%2520photography&width=1920&height=1080&seq=1&orientation=landscape");
+        background-size: cover;
+        background-position: center;
+      }
+      .hero-overlay {
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.95) 0%,
+          rgba(255, 255, 255, 0.9) 50%,
+          rgba(255, 255, 255, 0.4) 80%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #4a90e2;
+        transition: width 0.3s ease;
+      }
+      .nav-link.active::after,
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .custom-checkbox {
+        display: none;
+      }
+      .checkbox-label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .checkbox-custom {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #4a90e2;
+        border-radius: 4px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+      }
+      .checkbox-custom i {
+        color: white;
+        font-size: 12px;
+        visibility: hidden;
+      }
+      .custom-checkbox:checked + .checkbox-label .checkbox-custom {
+        background-color: #4a90e2;
+      }
+      .custom-checkbox:checked + .checkbox-label .checkbox-custom i {
+        visibility: visible;
+      }
+      .custom-switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+      }
+      .custom-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .switch-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 24px;
+      }
+      .switch-slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+      input:checked + .switch-slider {
+        background-color: #4a90e2;
+      }
+      input:checked + .switch-slider:before {
+        transform: translateX(26px);
+      }
+      .counter {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+      }
     </style>
-</head>
-<body class="bg-gray-50">
-      <header class="fixed w-full bg-white shadow-md z-50">
+  </head>
+  <body class="bg-gray-50">
+    <header class="fixed w-full bg-white shadow-md z-50">
       <div
         class="container mx-auto px-4 py-3 flex items-center justify-between"
       >
         <div class="flex items-center">
-          <a href="index.html" class="text-3xl font-['Pacifico'] text-primary"
-            >Inidhu</a
-          >
+          <a href="index.html" class="text-3xl font-['Pacifico'] text-primary">
+            <img
+              src="images/Inidhu education logo.png"
+              alt="Inidhu Logo"
+              style="height: 80px; width: 170px; padding: 0px 0px 23px 20px"
+            />
+          </a>
         </div>
 
         <!-- Desktop Navigation -->
@@ -157,12 +204,12 @@
             class="nav-link active text-gray-800 font-medium hover:text-primary transition-colors"
             >Impact</a
           >
-          <a
+          <!-- <a
             href="founder-team.html"
             class="text-gray-800 font-medium hover:text-primary transition-colors"
             >Our Team</a
-          >
-           <a
+          > -->
+          <a
             href="success-stories.html"
             class="nav-link text-gray-800 font-medium hover:text-primary transition-colors"
             >Success Stories</a
@@ -172,7 +219,6 @@
             class="nav-link text-gray-800 font-medium hover:text-primary transition-colors"
             >Contact</a
           >
-           
         </nav>
 
         <div class="flex items-center">
@@ -219,11 +265,11 @@
               class="text-gray-800 font-medium hover:text-primary transition-colors"
               >Impact</a
             >
-            <a
+            <!-- <a
               href="founder-team.html"
               class="text-gray-800 font-medium hover:text-primary transition-colors"
               >Our Team</a
-            >
+            > -->
             <a
               href="success-stories.html"
               class="text-gray-800 font-medium hover:text-primary transition-colors"
@@ -234,7 +280,7 @@
               class="text-gray-800 font-medium hover:text-primary transition-colors"
               >Contact</a
             >
-              
+
             <a
               href="donate.html"
               class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors text-center whitespace-nowrap"
@@ -246,63 +292,152 @@
     </header>
 
     <main class="pt-28 pb-16">
-        <section class="bg-white py-16">
-            <div class="container mx-auto px-4 max-w-4xl">
-                <h1 class="text-4xl font-bold text-gray-900 mb-6 text-center">Our Impact</h1>
-                <p class="text-lg text-gray-700 mb-12 text-center">
-                    Discover the tangible difference Inidhu Education Foundation is making in the lives of children and communities through our dedicated programs.
-                </p>
+      <section class="bg-white py-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+          <h1 class="text-4xl font-bold text-gray-900 mb-6 text-center">
+            Our Impact
+          </h1>
+          <p class="text-lg text-gray-700 mb-12 text-center">
+            Discover the tangible difference Inidhu Education Foundation is
+            making in the lives of children and communities through our
+            dedicated programs.
+          </p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div class="bg-blue-50 rounded-lg shadow-lg p-8">
-                        <div class="flex items-center mb-4">
-                            <i class="ri-check-double-line ri-3x text-primary mr-4"></i>
-                            <h2 class="text-3xl font-bold text-gray-900">ELRP Impact</h2>
-                        </div>
-                        <ul class="list-disc list-inside text-gray-700 space-y-3">
-                            <li><span class="font-semibold">3X improvement</span> in student learning levels.</li>
-                            <li><span class="font-semibold">30% better performance</span> compared to control schools.</li>
-                            <li><span class="font-semibold">Harish's case:</span> transformed from an absentee student to actively engaging in cognitive activities.</li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-green-50 rounded-lg shadow-lg p-8">
-                        <div class="flex items-center mb-4">
-                            <i class="ri-line-chart-line ri-3x text-secondary mr-4"></i>
-                            <h2 class="text-3xl font-bold text-gray-900">EQUIP Impact</h2>
-                        </div>
-                        <ul class="list-disc list-inside text-gray-700 space-y-3">
-                            <li>NMMS qualifiers <span class="font-semibold">doubled from 73 (2023–24) to 139 (2024–25)</span>.</li>
-                            <li>District ranking improved <span class="font-semibold">from 30 to 20</span>.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="mt-16 text-center bg-gray-100 p-8 rounded-lg shadow">
-                    <p class="text-xl italic text-gray-800 mb-6">
-                        "Data-backed improvements demonstrate effective educational transformation."
-                    </p>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Looking Ahead: Scaling Our Reach</h2>
-                    <p class="text-lg text-gray-700">
-                        We are planning to scale the Early Learner Readiness Program (ELRP) to <span class="font-semibold">13 more schools</span> in Thiruvarur and Koradacherry blocks, aiming to benefit <span class="font-semibold">250+ children</span> in the 2025–26 academic year.
-                    </p>
-                </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="bg-blue-50 rounded-lg shadow-lg p-8">
+              <div class="flex items-center mb-4">
+                <i class="ri-check-double-line ri-3x text-primary mr-4"></i>
+                <h2 class="text-3xl font-bold text-gray-900">ELRP Impact</h2>
+              </div>
+              <ul class="list-disc list-inside text-gray-700 space-y-3">
+                <li>
+                  <span class="font-semibold">3X improvement</span> in student
+                  learning levels.
+                </li>
+                <li>
+                  <span class="font-semibold">30% better performance</span>
+                  compared to control schools.
+                </li>
+                <li>
+                  <span class="font-semibold">Harish's case:</span> transformed
+                  from an absentee student to actively engaging in cognitive
+                  activities.
+                </li>
+              </ul>
             </div>
-        </section>
+
+            <div class="bg-green-50 rounded-lg shadow-lg p-8">
+              <div class="flex items-center mb-4">
+                <i class="ri-line-chart-line ri-3x text-secondary mr-4"></i>
+                <h2 class="text-3xl font-bold text-gray-900">EQUIP Impact</h2>
+              </div>
+              <ul class="list-disc list-inside text-gray-700 space-y-3">
+                <li>
+                  NMMS qualifiers
+                  <span class="font-semibold"
+                    >doubled from 73 (2023–24) to 139 (2024–25)</span
+                  >.
+                </li>
+                <li>
+                  District ranking improved
+                  <span class="font-semibold">from 30 to 20</span>.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-16 text-center bg-gray-100 p-8 rounded-lg shadow">
+            <p class="text-xl italic text-gray-800 mb-6">
+              "Data-backed improvements demonstrate effective educational
+              transformation."
+            </p>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Looking Ahead: Scaling Our Reach
+            </h2>
+            <p class="text-lg text-gray-700">
+              We are planning to scale the Early Learner Readiness Program
+              (ELRP) to <span class="font-semibold">13 more schools</span> in
+              Thiruvarur and Koradacherry blocks, aiming to benefit
+              <span class="font-semibold">250+ children</span> in the 2025–26
+              academic year.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Achievements -->
+      <div class="mt-16 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">
+          Our Achievements in 2024
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div
+            class="bg-blue-100 rounded-lg p-6 flex items-center justify-center shadow"
+          >
+            <i class="ri-user-star-line ri-2x text-primary mr-3"></i>
+            <p class="text-xl font-semibold text-gray-800">
+              Trained 2,000+ teachers & 20 BEOs
+            </p>
+          </div>
+          <div
+            class="bg-green-100 rounded-lg p-6 flex items-center justify-center shadow"
+          >
+            <i class="ri-award-line ri-2x text-secondary mr-3"></i>
+            <p class="text-xl font-semibold text-gray-800">
+              Provided NMMS MAT training to 2,300+ students
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Section: Charts -->
+      <div class="mt-16 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">
+          Impact Through Data
+        </h2>
+        <div class="space-y-12 max-w-3xl mx-auto">
+          <div>
+            <img
+              src="images/learning-level.png"
+              alt="Improvement in learning level"
+              class="w-full rounded shadow-lg"
+            />
+            <p class="text-gray-700 mt-4 text-base">
+              <strong>% of improvement in students' learning level</strong>
+              — Comparison between baseline and endline across key developmental
+              domains.
+            </p>
+          </div>
+          <div>
+            <img
+              src="/images/domainwise.png"
+              alt="Domain-wise comparison"
+              class="w-full rounded shadow-lg"
+            />
+            <p class="text-gray-700 mt-4 text-base">
+              <strong>30% improvement</strong> in students’ learning level
+              between test and control schools — Domain-wise comparison shows
+              higher gains in intervention schools.
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12 md:py-16">
+    <footer class="bg-gray-900 text-white py-12 md:py-16">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <!-- About Column -->
           <div>
             <h3 class="text-xl font-bold mb-4">About Inidhu</h3>
             <p class="text-gray-400 mb-6">
-              Inidhu Education Foundation is a non-profit organization dedicated
-              to providing quality education to underprivileged children and
-              empowering communities through sustainable educational
-              initiatives.
+              At Inidhu, we are committed to ensuring quality education for all
+              children. In August 2024, we signed a Memorandum of Understanding
+              (MoU) with the District Collector of Thiruvarur to initiate and
+              implement District Educational Quality Improvement Programs
+              (DEQUIP) in the district. As part of this collaboration, we have
+              been provided with a dedicated space at the District Collectorate
+              to drive our efforts.
             </p>
             <div class="flex space-x-4">
               <a
@@ -339,58 +474,61 @@
           <!-- Quick Links -->
           <div>
             <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-            <ul class="space-y-3">
-              <li>
-                <a
-                  href="about.html"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >About Us</a
-                >
-              </li>
-              <li>
-                <a
-                  href="programs.html"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Our Programs</a
-                >
-              </li>
-              <li>
-                <a
-                  href="impact.html"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Impact</a
-                >
-              </li>
-              <li>
-                <a
-                  href="donate.html"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Donate</a
-                >
-              </li>
-              <li>
-                <a
-                  href="founder-team.html"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Our Team</a
-                >
-              </li>
-               <li>
-                <a
-                  href="success-stories.html"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Success Stories</a
-                >
-              </li>
-              <li>
-                <a
-                  href="contact.html"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Contact Us</a
-                >
-              </li>
-             
-            </ul>
+            <div class="grid grid-cols-2 gap-x-4 gap-y-3">
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="about.html"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="programs.html"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Our Programs</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="impact.html"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Impact</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="donate.html"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Donate</a
+                  >
+                </li>
+              </ul>
+              <ul class="space-y-3">
+                <!-- <li>
+                  <a
+                    href="founder-team.html"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Our Team</a
+                  >
+                </li> -->
+                <li>
+                  <a
+                    href="success-stories.html"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Success Stories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="contact.html"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
 
           <!-- Contact Info -->
@@ -430,7 +568,7 @@
               <li class="text-gray-400">Saturday: 10:00 AM - 2:00 PM</li>
               <li class="text-gray-400">Sunday: Closed</li>
             </ul> -->
-            <!-- <div class="mt-6">
+          <!-- <div class="mt-6">
               <h4 class="font-bold mb-2">We Accept</h4>
               <div class="flex space-x-3">
                 <div class="w-10 h-6 flex items-center justify-center">
@@ -572,5 +710,5 @@
         });
       });
     </script>
-</body>
+  </body>
 </html>
