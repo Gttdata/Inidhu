@@ -169,20 +169,18 @@
   </head>
   <body class="bg-gray-50">
     <header class="fixed w-full bg-white shadow-md z-50">
-      <div
-        class="container mx-auto px-4 py-3 flex items-center justify-between"
-      >
+      <div class="container mx-auto px-4 flex items-center justify-between">
         <div class="flex items-center">
           <a href="index.html" class="text-3xl font-['Pacifico'] text-primary">
             <img
               src="images/Inidhu education logo.png"
               alt="Inidhu Logo"
-              style="height: 80px; width: 170px; padding: 0px 0px 23px 20px;"
+              style="height: 80px; width: 170px; padding: 0px 0px 23px 20px"
             />
           </a>
         </div>
 
-        <nav class="hidden md:flex items-center space-x-8">
+        <nav class="hidden lg:flex items-center space-x-8">
           <a
             href="index.html"
             class="nav-link text-gray-800 font-medium hover:text-primary transition-colors"
@@ -218,13 +216,13 @@
         <div class="flex items-center">
           <a
             href="donate.html"
-            class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap"
+            class="hidden lg:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap"
             >Donate Now</a
           >
 
           <button
             id="mobile-menu-button"
-            class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700"
+            class="lg:hidden w-10 h-10 flex items-center justify-center text-gray-700"
           >
             <i class="ri-menu-line ri-2x"></i>
           </button>
@@ -233,7 +231,7 @@
 
       <div
         id="mobile-menu"
-        class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 ease-in-out pointer-events-none"
+        class="lg:hidden bg-white shadow-lg absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 ease-in-out pointer-events-none"
       >
         <div class="container mx-auto px-4 py-3">
           <nav class="flex flex-col space-y-4 py-4">
@@ -298,9 +296,9 @@
                 <li class="flex items-start">
                   <i class="ri-map-pin-line ri-xl text-primary mr-3 mt-1"></i>
                   <span
-                    >Inidhu Education Foundation (Reg No: 43/2024)<br />2nd
-                    Floor, Opp. TAHDCO Office<br />District Collectorate,
-                    Thiruvarur – 610004</span
+                    >Inidhu Education Foundation (Reg No: 43/2024), 46F,
+                  Mettuppalaiyam, East Byepass Road, Vijayapuram, Thiruvarur
+                  District Tamil Nadu - 610001</span
                   >
                 </li>
                 <li class="flex items-center">
@@ -360,11 +358,15 @@
             <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
               Send Us a Message
             </h2>
-            <form id="contactForm" action="#" method="POST" class="space-y-6">
+            <form
+              id="contactForm"
+              method="POST"
+              action="https://script.google.com/macros/s/AKfycbzGLDRP-BBbuczsdZsNBab9EVxVX74-nFZVNvG0LLe_ujHkMizHSbD2EwVlfsJtz0galQ/exec"
+            >
               <div>
-                <label for="name" class="block text-gray-700 font-medium mb-2"
-                  >Your Name</label
-                >
+                <label for="name" class="block text-gray-700 font-medium mb-2">
+                  Your Name
+                </label>
                 <input
                   type="text"
                   id="name"
@@ -375,9 +377,9 @@
                 />
               </div>
               <div>
-                <label for="email" class="block text-gray-700 font-medium mb-2"
-                  >Your Email</label
-                >
+                <label for="email" class="block text-gray-700 font-medium mb-2">
+                  Your Email
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -391,8 +393,9 @@
                 <label
                   for="subject"
                   class="block text-gray-700 font-medium mb-2"
-                  >Subject</label
                 >
+                  Subject
+                </label>
                 <input
                   type="text"
                   id="subject"
@@ -406,8 +409,9 @@
                 <label
                   for="message"
                   class="block text-gray-700 font-medium mb-2"
-                  >Your Message</label
                 >
+                  Your Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -417,9 +421,10 @@
                   required
                 ></textarea>
               </div>
-              <div class="text-center">
+              <div class="text-center mt-4">
                 <button
                   type="submit"
+                  id="submitButton"
                   class="bg-primary text-white px-8 py-3 rounded-button font-semibold hover:bg-opacity-90 transition-colors"
                 >
                   Send Message
@@ -427,6 +432,57 @@
               </div>
             </form>
           </div>
+
+          <!-- Thank you message -->
+          <div
+            style="display: none"
+            id="thankyou_message"
+            class="text-center mt-10"
+          >
+            <h2 class="text-2xl font-semibold text-green-600">
+              ✅ Thanks for contacting us! We’ll get back to you soon.
+            </h2>
+          </div>
+
+          <script>
+            document
+              .getElementById("contactForm")
+              .addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const form = e.target;
+                const data = new FormData(form);
+                const submitButton = document.getElementById("submitButton");
+
+                submitButton.disabled = true;
+                submitButton.textContent = "Sending...";
+
+                fetch(form.action, {
+                  method: "POST",
+                  body: data,
+                })
+                  .then((res) => res.json())
+                  .then((data) => {
+                    if (data.success) {
+                      form.reset();
+                      form.style.display = "none";
+                      document.getElementById(
+                        "thankyou_message"
+                      ).style.display = "block";
+                    } else {
+                      alert("Submission failed: " + data.error);
+                    }
+                  })
+                  .catch((err) => {
+                    console.error("Submission error:", err);
+                    alert("Error submitting form. Please try again later.");
+                  })
+                  .finally(() => {
+                    submitButton.disabled = false;
+                    submitButton.textContent = "Send Message";
+                  });
+              });
+          </script>
         </div>
       </section>
     </main>
@@ -537,9 +593,9 @@
                   <i class="ri-map-pin-line"></i>
                 </div>
                 <span class="text-gray-400"
-                  >Inidhu Education Foundation (Reg No: 43/2024) Second Floor,
-                  Opp. To TAHDCO office, District Collectorate, Thiruvarur – 610
-                  004
+                  >Inidhu Education Foundation (Reg No: 43/2024), 46F,
+                  Mettuppalaiyam, East Byepass Road, Vijayapuram, Thiruvarur
+                  District Tamil Nadu - 610001
                 </span>
               </li>
               <li class="flex items-center">
@@ -681,23 +737,35 @@
       });
     </script>
 
-    <script>
+    <!-- <script
+      data-cfasync="false"
+      type="text/javascript"
+      src="form-submission-handler.js"
+    ></script> -->
+    <!-- <script>
+
       document.addEventListener("DOMContentLoaded", function () {
         const contactForm = document.getElementById("contactForm");
         if (contactForm) {
           contactForm.addEventListener("submit", function (event) {
-            // Prevent default form submission for demonstration purposes
-            // In a real application, you'd send the data to your backend here
-            event.preventDefault();
+            // Remove this line to allow submission
+            // event.preventDefault();
 
-            // Simulate form submission success
-            alert("Message sent successfully!");
+            // Optionally show loading or disable the button
+            const button = contactForm.querySelector("button[type='submit']");
+            button.disabled = true;
+            button.textContent = "Sending...";
 
-            // Reset the form fields
-            contactForm.reset();
+            // After submission completes (can’t listen to response directly here), reset form
+            setTimeout(() => {
+              alert("Message sent successfully!");
+              button.disabled = false;
+              button.textContent = "Send Message";
+              contactForm.reset();
+            }, 2000); // Just simulate after ~2s
           });
         }
       });
-    </script>
+    </script> -->
   </body>
 </html>

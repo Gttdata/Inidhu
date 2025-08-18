@@ -167,7 +167,7 @@
       }
       .hero-slideshow img {
         position: absolute;
-        top: 0;
+        top: 11%;
         left: 0;
         width: 100%;
         height: 100%;
@@ -192,9 +192,7 @@
   </head>
   <body class="bg-gray-50">
     <header class="fixed w-full bg-white shadow-md z-50">
-      <div
-        class="container mx-auto px-4 py-3 flex items-center justify-between"
-      >
+      <div class="container mx-auto px-4 flex items-center justify-between">
         <div class="flex items-center">
           <a href="index.html" class="text-3xl font-['Pacifico'] text-primary">
             <img
@@ -205,7 +203,7 @@
           </a>
         </div>
 
-        <nav class="hidden md:flex items-center space-x-8">
+        <nav class="hidden lg:flex items-center space-x-8">
           <a
             href="index.html"
             class="nav-link active text-gray-800 font-medium hover:text-primary transition-colors"
@@ -246,13 +244,13 @@
         <div class="flex items-center">
           <a
             href="donate.html"
-            class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap"
+            class="hidden lg:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap"
             >Donate Now</a
           >
 
           <button
             id="mobile-menu-button"
-            class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700"
+            class="lg:hidden w-10 h-10 flex items-center justify-center text-gray-700"
           >
             <i class="ri-menu-line ri-2x"></i>
           </button>
@@ -261,7 +259,7 @@
 
       <div
         id="mobile-menu"
-        class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 ease-in-out pointer-events-none"
+        class="lg:hidden bg-white shadow-lg absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 ease-in-out pointer-events-none"
       >
         <div class="container mx-auto px-4 py-3">
           <nav class="flex flex-col space-y-4 py-4">
@@ -352,28 +350,28 @@
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Welcome to Inidhu Education Foundation
             </h2>
-            <p class="text-lg text-gray-700 mb-4">
+            <!-- <p class="text-lg text-gray-700 mb-4">
               Inidhu Education Foundation is committed to ensuring quality
               foundational education for all children through a stimulating
               learning environment. We closely collaborate with the government
               system to bring impactful changes in the education space,
               especially in Thiruvarur district, Tamil Nadu.
-            </p>
-            <p class="text-xl italic text-primary mt-6">
+            </p> -->
+            <p class="text-xl italic mt-6">
               🌱 Vision:<br />
-              <span class="font-semibold"
+              <span class="font-semibold text-3xl"
                 >"To ensure equitable access to quality education for all
                 children."</span
               >
             </p>
-            <p class="text-xl italic text-primary mt-6">
+            <!-- <p class="text-xl italic text-primary mt-6">
               🌱 Mission:<br />
               <span class="font-semibold"
                 >"To provide high-quality Early Childhood Education and
                 Foundational learning for children aged 3 to 8 through play and
                 activity-based learning"</span
               >
-            </p>
+            </p> -->
           </div>
         </div>
       </section>
@@ -469,12 +467,13 @@
 
             <div class="md:w-1/2 flex justify-center items-center">
               <div
-                class="w-full max-w-[400px] h-[300px] overflow-hidden rounded-xl shadow-lg"
+                class="w-full max-w-[400px] h-[300px] overflow-hidden shadow-lg"
+                style="border-radius: 10px"
               >
                 <img
                   src="images/mou-signing.jpeg"
                   alt="MoU Signing with District Collector"
-                  class="w-full h-full object-cover"
+                  class="w-full h-full object-fit"
                 />
               </div>
             </div>
@@ -487,12 +486,13 @@
           <div class="flex flex-col md:flex-row items-center max-w-6xl mx-auto">
             <div class="md:w-1/2 flex justify-center items-center mb-8 md:mb-0">
               <div
-                class="w-full max-w-[400px] h-[300px] overflow-hidden rounded-xl shadow-lg"
+                class="w-full max-w-[400px] h-[300px] overflow-hidden shadow-lg"
+                style="border-radius: 10px"
               >
                 <img
                   src="images/mou-news.jpeg"
                   alt="Newspaper Coverage of MOU"
-                  class="w-full h-full object-cover"
+                  class="w-full h-full object-fit"
                 />
               </div>
             </div>
@@ -541,6 +541,203 @@
           </div>
         </div>
       </section> -->
+
+      <!-- Reach & Impact Section -->
+      <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Reach & Impact
+            </h2>
+            <!-- <p class="text-lg text-gray-700">We are proud of the positive change we are making in the community. Here are some highlights of our reach and impact so far.</p> -->
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            <div
+              class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6"
+            >
+              <img
+                src="images/impactt1.png"
+                alt="Impact 1"
+                class="w-full h-64 object-fit rounded-md mb-4"
+              />
+              <h3 class="text-xl pt-2 font-semibold text-gray-800 mb-2">
+                ELRP program
+              </h3>
+              <!-- <p class="text-gray-600 text-center">Our programs have reached hundreds of children in underserved communities, providing them with quality foundational education and new opportunities for growth.</p> -->
+            </div>
+            <div
+              class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6"
+            >
+              <img
+                src="images/impact2.png"
+                alt="Impact 2"
+                class="w-full h-64 object-fit rounded-md mb-4"
+              />
+              <h3 class="text-xl pt-2 font-semibold text-gray-800 mb-2">
+                EQUIP
+              </h3>
+              <!-- <p class="text-gray-600 text-center">Through our dedicated efforts, we have empowered students and families, fostering a culture of learning and hope for a brighter future.</p> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="py-20 bg-white-100">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-1 gap-10 w-full mx-auto">
+            <div
+              class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6"
+            >
+              <img
+                src="images/WhatsApp Image 2025-08-14 at 10.42.27 AM.jpeg"
+                class="w-full max-w-3xl h-auto rounded-[2rem] object-cover"
+                alt="Community Impact"
+              />
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <section class="bg-white py-2">
+        <div class="container mx-auto px-4">
+          <!-- <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">
+            📷 Gallery
+          </h2> -->
+
+          <div class="relative flex flex-col items-center">
+            <!-- Full-width container -->
+            <div
+              id="carousel-container"
+              class="w-full max-w-5xl mx-auto overflow-hidden rounded-2xl shadow-lg relative group"
+            >
+              <!-- Slides track -->
+              <div
+                id="gallery-slides"
+                class="flex transition-transform duration-700 ease-in-out"
+              >
+                <img
+                  src="images/First.jpeg"
+                  class="w-full h-[500px] object-fit flex-shrink-0 rounded-2xl"
+                />
+                <img
+                  src="images/Second.jpeg"
+                  class="w-full h-[500px] object-fit flex-shrink-0 rounded-2xl"
+                />
+                <img
+                  src="images/Third.jpeg"
+                  class="w-full h-[500px] object-fit flex-shrink-0 rounded-2xl"
+                />
+              </div>
+
+              <!-- Arrows -->
+              <button
+                id="prev-slide"
+                class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/70 hover:bg-white text-gray-700 rounded-full p-2 shadow hidden group-hover:block z-10"
+              >
+                <i class="ri-arrow-left-s-line text-2xl"></i>
+              </button>
+              <button
+                id="next-slide"
+                class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/70 hover:bg-white text-gray-700 rounded-full p-2 shadow hidden group-hover:block z-10"
+              >
+                <i class="ri-arrow-right-s-line text-2xl"></i>
+              </button>
+            </div>
+
+            <!-- Pagination Dots -->
+            <div id="dots" class="flex space-x-2 mt-4"></div>
+          </div>
+        </div>
+      </section>
+      <!-- JavaScript (responsive with full width) -->
+      <script>
+        const gallery = document.getElementById("gallery-slides");
+        const container = document.getElementById("carousel-container");
+        const nextBtn = document.getElementById("next-slide");
+        const prevBtn = document.getElementById("prev-slide");
+        const dotsContainer = document.getElementById("dots");
+
+        const totalSlides = gallery.children.length;
+        let currentIndex = 0;
+        let interval;
+
+        // Create dots
+        for (let i = 0; i < totalSlides; i++) {
+          const dot = document.createElement("button");
+          dot.className =
+            "w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all";
+          dotsContainer.appendChild(dot);
+        }
+
+        const dots = dotsContainer.children;
+
+        function updateDots() {
+          Array.from(dots).forEach((dot, i) => {
+            dot.classList.toggle("bg-gray-800", i === currentIndex);
+            dot.classList.toggle("bg-gray-300", i !== currentIndex);
+          });
+        }
+
+        function updateSlide() {
+          const slideWidth = container.offsetWidth;
+          gallery.style.transform = `translateX(-${
+            currentIndex * slideWidth
+          }px)`;
+          updateDots();
+        }
+
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          updateSlide();
+        }
+
+        function prevSlide() {
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+          updateSlide();
+        }
+
+        Array.from(dots).forEach((dot, i) => {
+          dot.addEventListener("click", () => {
+            currentIndex = i;
+            updateSlide();
+          });
+        });
+
+        function startAutoSlide() {
+          interval = setInterval(nextSlide, 3000);
+        }
+
+        function stopAutoSlide() {
+          clearInterval(interval);
+        }
+
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", prevSlide);
+        container.addEventListener("mouseenter", stopAutoSlide);
+        container.addEventListener("mouseleave", startAutoSlide);
+
+        // Touch support
+        let startX = 0;
+        container.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+          stopAutoSlide();
+        });
+
+        container.addEventListener("touchend", (e) => {
+          const endX = e.changedTouches[0].clientX;
+          const diff = endX - startX;
+          if (Math.abs(diff) > 50) {
+            if (diff < 0) nextSlide();
+            else prevSlide();
+          }
+          startAutoSlide();
+        });
+
+        // Responsive support
+        window.addEventListener("resize", updateSlide);
+
+        // Init
+        updateSlide();
+        startAutoSlide();
+      </script>
     </main>
 
     <footer class="bg-gray-900 text-white py-16 md:py-20">
@@ -549,8 +746,13 @@
           <div>
             <h3 class="text-xl font-bold mb-4">About Inidhu</h3>
             <p class="text-gray-400 mb-6">
-             At Inidhu, we are committed to ensuring quality education for all children. In August 2024, we signed a Memorandum of Understanding (MoU) with the District Collector of Thiruvarur to initiate and implement District Educational Quality Improvement Programs (DEQUIP) in the district. As part of this collaboration, we have been provided with a dedicated space at the District Collectorate to drive our efforts.
-
+              At Inidhu, we are committed to ensuring quality education for all
+              children. In August 2024, we signed a Memorandum of Understanding
+              (MoU) with the District Collector of Thiruvarur to initiate and
+              implement District Educational Quality Improvement Programs
+              (DEQUIP) in the district. As part of this collaboration, we have
+              been provided with a dedicated space at the District Collectorate
+              to drive our efforts.
             </p>
             <div class="flex space-x-4">
               <a
@@ -651,9 +853,9 @@
                   <i class="ri-map-pin-line"></i>
                 </div>
                 <span class="text-gray-400"
-                  >Inidhu Education Foundation (Reg No: 43/2024) Second Floor,
-                  Opp. To TAHDCO office, District Collectorate, Thiruvarur – 610
-                  004
+                  >Inidhu Education Foundation (Reg No: 43/2024), 46F,
+                  Mettuppalaiyam, East Byepass Road, Vijayapuram, Thiruvarur
+                  District Tamil Nadu - 610001
                 </span>
               </li>
               <li class="flex items-center">
@@ -707,6 +909,7 @@
           "images/Teacher in classroom.jpeg",
           "images/student playing photo 2.jpeg",
           "images/student palying in ECCEcenter.jpeg",
+          "images/Me Engaging with stuents.jpg",
         ]; // Replace with your actual image paths
 
         let currentImageIndex = 0;
