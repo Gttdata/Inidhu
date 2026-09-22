@@ -207,7 +207,7 @@
       </nav>
 
       <div class="flex items-center">
-        <a href="donate.html"
+        <a href="https://r.give.do/EDkcrNp1" target="_blank" rel="noopener noreferrer"
           class="hidden lg:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Donate
           Now</a>
 
@@ -236,7 +236,7 @@
             Stories</a>
           <a href="newsletter.html" class="nav-link active text-gray-800 font-medium hover:text-primary transition-colors">Newsletter</a>
           <a href="contact.html" class="text-gray-800 font-medium hover:text-primary transition-colors">Contact</a>
-          <a href="donate.html"
+          <a href="https://r.give.do/EDkcrNp1" target="_blank" rel="noopener noreferrer"
             class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors text-center whitespace-nowrap">Donate
             Now</a>
         </nav>
@@ -413,7 +413,8 @@
 
           const dl = document.createElement("a");
           dl.href = url;
-          dl.download = title + ".pdf";
+          dl.target = "_blank";
+          dl.rel = "noopener noreferrer";
           dl.className = "border border-gray-300 text-gray-700 px-5 py-2 !rounded-button font-medium hover:bg-gray-100 transition-colors flex items-center justify-center gap-2 flex-1";
           const dlIcon = document.createElement("i");
           dlIcon.className = "ri-download-2-line";
